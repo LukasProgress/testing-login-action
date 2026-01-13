@@ -23,7 +23,7 @@ jobs:
       - name: Login to AWS Container Registry
         uses: dphi/login-action@add-support-for-amazonaws.eu
         with:
-          registry: ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ vars.AWS_REGION }}.amazonaws.com
+          registry: ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ vars.AWS_REGION }}.amazonaws.eu
           ecr: true
         env:
           AWS_REGION: ${{ vars.AWS_REGION }}
@@ -31,4 +31,4 @@ jobs:
       - name: Verify Login
         run: |
           echo "✅ Successfully logged in to ECR"
-          echo "Registry: ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ vars.AWS_REGION }}.amazonaws.com"
+          echo "Registry: ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ vars.AWS_REGION }}.amazonaws.eu"
