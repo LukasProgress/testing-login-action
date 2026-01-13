@@ -21,7 +21,7 @@ jobs:
           aws-region: ${{ vars.AWS_REGION }}
       
       - name: Login to AWS Container Registry
-        uses: dphi/login-action@debug-eusc
+        uses: dphi/login-action@615fc8065a111cd06087edc12f23df7c2c4be16e
         with:
           registry: ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ vars.AWS_REGION }}.amazonaws.eu
           ecr: true
